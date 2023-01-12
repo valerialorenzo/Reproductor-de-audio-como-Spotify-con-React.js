@@ -55,6 +55,15 @@ play()
 }
 
 
+const subirVolumen = () => {
+  reproductor.current.volume += 0.10;
+}
+const bajarVolumen = () => {
+  reproductor.current.volume -= 0.10;
+
+}
+
+
   const play = () => {
     reproductor.current.play();
 	playButton.current.style.display='none';
@@ -120,6 +129,16 @@ play()
             }}
           ></i>
         </button>
+
+        <button className="fas fa-volume-down" onClick={bajarVolumen}>
+
+          
+        </button>
+        <button className="fas fa-volume-up" onClick={subirVolumen}>
+
+          
+</button>
+
       </div>
     </div>
   );
